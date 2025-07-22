@@ -4,110 +4,140 @@
   <meta charset="UTF-8">
   <title>مدونة Mohammed Suliman</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="مدونة Mohammed Suliman - مقالات وأفكار.">
+  <meta name="description" content="مدونة Mohammed Suliman | مقالات تقنية وشخصية">
+  <link rel="icon" href="https://raw.githubusercontent.com/3pkf4/ly/refs/heads/video-downloader/IMG_20250625_021844_529.webp" type="image/webp">
   <style>
     body {
-      font-family: "Segoe UI", Tahoma, sans-serif;
-      background-color: #f2f2f2;
-      color: #333;
-      direction: rtl;
-      text-align: right;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      direction: rtl;
+      background: #f9f9f9;
+      color: #333;
     }
     header {
-      background-color: #007acc;
+      background: #c40000;
       color: white;
       padding: 20px;
       text-align: center;
     }
-    main {
-      padding: 20px;
+    header img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 10px;
     }
-    .post-preview {
+    nav {
+      background: #e60000;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .card {
       background: white;
-      padding: 15px;
+      padding: 20px;
       border-radius: 10px;
       margin-bottom: 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
-    .read-more {
-      color: #007acc;
-      text-decoration: none;
+    .card h2 {
+      color: #c40000;
+      margin-top: 0;
+    }
+    .card .date {
+      color: gray;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .card a {
+      color: #c40000;
       font-weight: bold;
-      display: inline-block;
-      margin-top: 10px;
+      text-decoration: none;
     }
-    .read-more:hover {
+    .card a:hover {
       text-decoration: underline;
-    }
-    #post-page {
-      display: none;
     }
     footer {
       text-align: center;
       font-size: 14px;
       color: #777;
-      margin: 40px 0;
+      padding: 20px 0;
     }
-    button {
-      background: #007acc;
-      color: white;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-    button:hover {
-      background: #005a99;
+    @media (max-width: 600px) {
+      header img {
+        width: 80px;
+        height: 80px;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>✍️ مدونة Mohammed Suliman</h1>
-    <p>مرحبا بك في مدونتي الشخصية!</p>
+    <img src="https://raw.githubusercontent.com/3pkf4/ly/refs/heads/video-downloader/IMG_20250625_021844_529.webp" alt="Mohammed Suliman">
+    <h1>مدونة Mohammed Suliman</h1>
+    <p>مساحتي الحرة للتدوين، الأفكار، والتقنية 🧠</p>
   </header>
 
-  <main>
-    <!-- الصفحة الرئيسية -->
-    <section id="home-page">
-      <div class="post-preview">
-        <h2>📌 تجربتي مع GitHub Pages</h2>
-        <p>كانت تجربة رائعة لإنشاء مدونة بسيطة وسريعة بدون خوادم أو قواعد بيانات...</p>
-        <a href="#" class="read-more" onclick="showPost()">اقرأ المزيد →</a>
-      </div>
-    </section>
+  <nav>
+    <a href="#">الرئيسية</a>
+    <a href="#">من أنا</a>
+    <a href="#">تواصل معي</a>
+  </nav>
 
-    <!-- صفحة المقال -->
-    <section id="post-page">
+  <div class="container">
+
+    <div class="card">
       <h2>📌 تجربتي مع GitHub Pages</h2>
-      <p>📅 22 يوليو 2025</p>
+      <div class="date">22 يوليو 2025</div>
+      <p>أنشأت مدونة بدون سيرفر، فقط باستخدام GitHub Pages. كانت تجربة سلسة وعملية وسريعة. هنا أشارك تفاصيل التجربة وخطوات التنفيذ خطوة بخطوة...</p>
+      <a href="#" onclick="showPost()">اقرأ المقال كاملًا →</a>
+    </div>
+
+    <div class="card" id="post" style="display:none;">
+      <h2>📌 تجربتي مع GitHub Pages</h2>
+      <div class="date">22 يوليو 2025</div>
       <p>
-        كانت تجربة إنشاء مدونة عبر GitHub Pages ممتعة وسهلة. لا تحتاج إلى خادم أو قاعدة بيانات، فقط ملفات HTML وCSS ويتم نشرها تلقائيًا.<br>
-        كل ما قمت به هو إنشاء مستودع، كتابة بعض الصفحات، وربطها، وها أنا أشارك أفكاري عبر هذه المدونة.
+        GitHub Pages تتيح لك نشر مواقع ساكنة (static websites) مجانًا. كل ما تحتاجه هو حساب GitHub، ومجلد فيه ملفات HTML/CSS/JS.
+        <br><br>
+        قمت بإنشاء مستودع جديد، أضفت إليه ملف index.html بسيط، وفعلت GitHub Pages من الإعدادات.
+        <br><br>
+        الموقع يعمل الآن على رابط مباشر بدون الحاجة لأي استضافة خارجية.
+        <br><br>
+        أنصح كل من يريد تجربة بناء موقع بسيط أو مدونة شخصية باستخدام هذه الخدمة.
       </p>
-      <button onclick="goHome()">← العودة إلى الرئيسية</button>
-    </section>
-  </main>
+      <a href="#" onclick="hidePost()">← العودة</a>
+    </div>
+
+  </div>
 
   <footer>
-    © 2025 Mohammed Suliman
+    © 2025 Mohammed Suliman — جميع الحقوق محفوظة
   </footer>
 
   <script>
     function showPost() {
-      document.getElementById("home-page").style.display = "none";
-      document.getElementById("post-page").style.display = "block";
+      document.querySelectorAll('.card')[0].style.display = 'none';
+      document.getElementById('post').style.display = 'block';
       window.scrollTo(0, 0);
     }
-
-    function goHome() {
-      document.getElementById("home-page").style.display = "block";
-      document.getElementById("post-page").style.display = "none";
+    function hidePost() {
+      document.getElementById('post').style.display = 'none';
+      document.querySelectorAll('.card')[0].style.display = 'block';
       window.scrollTo(0, 0);
     }
   </script>
+
 </body>
 </html>
