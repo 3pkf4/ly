@@ -4,27 +4,110 @@
   <meta charset="UTF-8">
   <title>مدونة Mohammed Suliman</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="مدونة شخصية تحتوي على مقالات وأفكار Mohammed Suliman.">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="مدونة Mohammed Suliman - مقالات وأفكار.">
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+      direction: rtl;
+      text-align: right;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #007acc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+    }
+    .post-preview {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .read-more {
+      color: #007acc;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .read-more:hover {
+      text-decoration: underline;
+    }
+    #post-page {
+      display: none;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      margin: 40px 0;
+    }
+    button {
+      background: #007acc;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background: #005a99;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>✍️ مدونة Mohammed Suliman</h1>
-    <p>أهلاً بك في مساحة أفكاري ومقالاتي!</p>
+    <p>مرحبا بك في مدونتي الشخصية!</p>
   </header>
 
   <main>
-    <section>
-      <h2>📚 المقالات:</h2>
-      <ul>
-        <li><a href="posts/first-post.html">📌 أول مقال: تجربتي مع GitHub Pages</a></li>
-        <li><a href="posts/second-post.html">🌐 كيف صممت هذه المدونة</a></li>
-      </ul>
+    <!-- الصفحة الرئيسية -->
+    <section id="home-page">
+      <div class="post-preview">
+        <h2>📌 تجربتي مع GitHub Pages</h2>
+        <p>كانت تجربة رائعة لإنشاء مدونة بسيطة وسريعة بدون خوادم أو قواعد بيانات...</p>
+        <a href="#" class="read-more" onclick="showPost()">اقرأ المزيد →</a>
+      </div>
+    </section>
+
+    <!-- صفحة المقال -->
+    <section id="post-page">
+      <h2>📌 تجربتي مع GitHub Pages</h2>
+      <p>📅 22 يوليو 2025</p>
+      <p>
+        كانت تجربة إنشاء مدونة عبر GitHub Pages ممتعة وسهلة. لا تحتاج إلى خادم أو قاعدة بيانات، فقط ملفات HTML وCSS ويتم نشرها تلقائيًا.<br>
+        كل ما قمت به هو إنشاء مستودع، كتابة بعض الصفحات، وربطها، وها أنا أشارك أفكاري عبر هذه المدونة.
+      </p>
+      <button onclick="goHome()">← العودة إلى الرئيسية</button>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Mohammed Suliman</p>
+    © 2025 Mohammed Suliman
   </footer>
+
+  <script>
+    function showPost() {
+      document.getElementById("home-page").style.display = "none";
+      document.getElementById("post-page").style.display = "block";
+      window.scrollTo(0, 0);
+    }
+
+    function goHome() {
+      document.getElementById("home-page").style.display = "block";
+      document.getElementById("post-page").style.display = "none";
+      window.scrollTo(0, 0);
+    }
+  </script>
 </body>
 </html>
