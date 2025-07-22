@@ -1,14 +1,39 @@
 body {
   font-family: sans-serif;
-  text-align: center;
-  background: #f8f8f8;
-  padding: 50px;
+  background: #f2f2f2;
   color: #333;
+  direction: rtl;
+  text-align: right;
+  padding: 20px;
+}
+
+header {
+  background-color: #007acc;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+main {
+  margin-top: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 a {
-  display: inline-block;
-  margin-top: 20px;
+  color: #007acc;
   text-decoration: none;
-  color: #0077cc;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 14px;
+  color: #777;
+  text-align: center;
 }
