@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  direction: rtl;
+  text-align: right;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  background: #c40000;
+  color: white;
+  padding: 20px 0;
+  margin-bottom: 10px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 20px;
+}
+
+.profile-pic {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+nav {
+  background: #e60000;
+  padding: 10px 0;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+nav a.active,
+nav a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  display: flex;
+  gap: 30px;
+}
+
+.posts-list {
+  flex: 3;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.post-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.post-card h3 {
+  margin-top: 0;
+  color: #c40000;
+}
+
+.post-date {
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.read-more {
+  color: #c40000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.sidebar {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  height: fit-content;
+}
+
+.sidebar-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 2px solid #c40000;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  color: #c40000;
+  margin-bottom: 10px;
+}
+
+.sidebar p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.social-links h4 {
+  margin-bottom: 10px;
+  color: #c40000;
+}
+
+.social-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links ul li {
+  margin-bottom: 8px;
+}
+
+.social-links ul li a {
+  color: #c40000;
+  text-decoration: none;
+}
+
+.social-links ul li a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #777;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+  }
+  .posts-list {
+    grid-template-columns: 1fr;
+  }
+}
