@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>تطبيق الدردشة - Mohammed Suliman</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="تطبيق دردشة عربي باسم مستخدم فريد وبحث عن المستخدمين من المتصفح" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <img src="https://raw.githubusercontent.com/3pkf4/ly/refs/heads/video-downloader/IMG_20250625_021844_529.webp" alt="Mohammed Suliman" class="profile-pic" />
+      <h1>مدونة Mohammed Suliman</h1>
+    </div>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="chat.html" class="active">الدردشة</a>
+      <a href="about.html">من أنا</a>
+      <a href="contact.html">تواصل معي</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="chat-hero" aria-labelledby="chat-title">
+      <div>
+        <p class="eyebrow">تطبيق دردشة</p>
+        <h2 id="chat-title">أنشئ اسم مستخدم فريد وابدأ المحادثة</h2>
+        <p>سجّل باسم مستخدم لا يتكرر، ابحث عن المستخدمين المسجلين، ثم افتح محادثة خاصة محفوظة على جهازك.</p>
+      </div>
+      <div class="chat-hero-actions">
+        <p id="currentUserBadge" class="current-user-badge" hidden></p>
+        <button class="secondary-button" id="logoutButton" type="button" hidden>تسجيل الخروج</button>
+        <button class="secondary-button" id="clearChat" type="button" hidden>مسح محادثاتي</button>
+      </div>
+    </section>
+
+    <section class="auth-panel" id="authPanel" aria-labelledby="authTitle">
+      <div>
+        <p class="eyebrow dark">حسابك</p>
+        <h2 id="authTitle">تسجيل الدخول أو إنشاء اسم مستخدم</h2>
+        <p>يجب أن يكون اسم المستخدم فريدًا. لا يمكن إنشاء نفس الاسم مرتين حتى لو اختلفت الحروف الكبيرة والصغيرة.</p>
+      </div>
+
+      <form class="auth-form" id="authForm">
+        <label for="usernameInput">اسم المستخدم</label>
+        <div class="auth-controls">
+          <input id="usernameInput" type="text" autocomplete="username" minlength="3" maxlength="20" placeholder="مثال: mohammed_1" required />
+          <button type="submit" name="mode" value="login">دخول</button>
+          <button type="submit" name="mode" value="register">إنشاء جديد</button>
+        </div>
+        <p class="form-help">مسموح بالحروف العربية أو الإنجليزية والأرقام والشرطة السفلية، من 3 إلى 20 حرفًا.</p>
+        <p class="form-message" id="authMessage" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="chat-app" id="chatApp" aria-label="واجهة تطبيق الدردشة" hidden>
+      <aside class="chat-panel contacts-panel" aria-label="قائمة المستخدمين والمحادثات">
+        <div class="panel-heading">
+          <h3>المستخدمون</h3>
+          <span class="status-pill" id="usersCount">0 متاح</span>
+        </div>
+
+        <label class="search-label" for="userSearch">البحث عن مستخدم للدردشة معه</label>
+        <input id="userSearch" class="search-input" type="search" placeholder="ابحث باسم المستخدم..." />
+        <div class="contact-list" id="userList"></div>
+      </aside>
+
+      <section class="chat-panel conversation-panel" aria-live="polite">
+        <div class="conversation-header">
+          <div class="avatar" id="activeAvatar" aria-hidden="true">؟</div>
+          <div>
+            <h3 id="activeName">اختر مستخدمًا</h3>
+            <p id="activeStatus">ابحث عن مستخدم ثم ابدأ المحادثة</p>
+          </div>
+        </div>
+
+        <div class="messages" id="messages" aria-label="الرسائل"></div>
+        <p class="typing-indicator" id="typingIndicator" hidden>يكتب الآن...</p>
+
+        <form class="message-form" id="messageForm">
+          <label class="sr-only" for="messageInput">اكتب رسالتك</label>
+          <input id="messageInput" type="text" autocomplete="off" maxlength="240" placeholder="اختر مستخدمًا أولًا" disabled required />
+          <button type="submit" disabled>إرسال</button>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Mohammed Suliman — جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script src="chat.js"></script>
+</body>
+</html>
